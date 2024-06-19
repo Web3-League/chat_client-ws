@@ -1,0 +1,31 @@
+/* ReactionCard.css */
+.reaction-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .reaction-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+  .reaction-emoji {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  .reaction-count {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

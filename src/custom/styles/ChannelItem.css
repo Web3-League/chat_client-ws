@@ -1,0 +1,16 @@
+.channel-item {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .channel-item:hover {
+    background-color: #e9e9e9;
+  }
+  

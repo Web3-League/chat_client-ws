@@ -1,0 +1,49 @@
+/* CustomModal.css */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.custom-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.custom-modal h2 {
+  margin-top: 0;
+}
+
+.custom-modal-content {
+  margin-bottom: 20px;
+}
+
+.custom-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-modal-submit, .custom-modal-close {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-modal-close {
+  background: #dc3545;
+}

@@ -1,0 +1,18 @@
+.custom-menu-item {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.custom-menu-item:hover {
+  background-color: #f1f1f1;
+}
+
+.custom-menu-item.dark {
+  color: #fff;
+}
+
+.custom-menu-item.dark:hover {
+  background-color: #444;
+}

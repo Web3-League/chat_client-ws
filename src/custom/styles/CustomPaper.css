@@ -1,0 +1,16 @@
+.custom-paper {
+    padding: 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+  }
+  
+  .custom-paper.light {
+    background-color: #fff;
+  }
+  
+  .custom-paper.dark {
+    background-color: #333;
+  }
+  

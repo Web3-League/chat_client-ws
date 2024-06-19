@@ -1,0 +1,6 @@
+/* src/components/custom/styles/Scrollable.css */
+.scrollable {
+  overflow-y: auto;
+  max-height: 100%;
+
+}

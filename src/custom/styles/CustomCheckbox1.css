@@ -1,0 +1,10 @@
+.custom-checkbox1 {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .custom-checkbox1 input {
+    margin-right: 5px;
+  }
+  

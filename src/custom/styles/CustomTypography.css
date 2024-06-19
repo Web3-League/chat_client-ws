@@ -1,0 +1,19 @@
+.custom-typography {
+  margin: 4px 0;
+}
+
+.custom-typography.body1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.custom-typography.body2 {
+  font-size: 0.875rem;
+}
+
+.custom-typography.h5 {
+  font-size: 1.5rem;
+  max-width: auto;
+}
+
+  

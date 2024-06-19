@@ -1,0 +1,62 @@
+// src/hooks/useSocket.js
+import { useState, useEffect, useCallback } from 'react';
+import { io } from 'socket.io-client';
+import { useAuth } from '../context/AuthContext';
+
+const useSocket1 = () => {
+  const { token } = useAuth();
+  const [socket, setSocket] = useState(null);
+  const [isConnected, setIsConnected] = useState(false);
+  const [channels, setChannels] = useState([]);
+
+  useEffect(() => {
+    if (token) {
+      const newSocket = io('http://localhost:3000', {
+        auth: { token },
+        transports: ['websocket', 'polling'],
+      });
+
+      newSocket.on('connect', () => {
+        setIsConnected(true);
+        console.log('Connected to server');
+      });
+
+      newSocket.on('disconnect', () => {
+        setIsConnected(false);
+        console.log('Disconnected from server');
+      });
+
+      newSocket.on('channels', (channels) => {
+        console.log('Received channels:', channels);
+        setChannels(channels);
+      });
+
+      setSocket(newSocket);
+
+      return () => newSocket.disconnect();
+    }
+  }, [token]);
+
+  const fetchChannels = useCallback((serverId) => {
+    if (socket) {
+      console.log('Emitting fetch_channels event for serverId:', serverId);
+      socket.emit('fetch_channels', { serverId });
+    }
+  }, [socket]);
+
+  const createChannel = useCallback((serverId, channelName) => {
+    if (socket) {
+      console.log('Creating channel for serverId:', serverId, 'with name:', channelName);
+      socket.emit('create_channel', { serverId, name: channelName });
+    }
+  }, [socket]);
+
+  return {
+    isConnected,
+    channels,
+    fetchChannels,
+    createChannel,
+  };
+};
+
+export default useSocket1;

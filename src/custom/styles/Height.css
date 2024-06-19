@@ -1,0 +1,20 @@
+.height-small {
+    height: 100px;
+  }
+  
+  .height-medium {
+    height: 200px;
+  }
+  
+  .height-large {
+    height: 400px;
+  }
+  
+  .height-full {
+    height: 100%;
+  }
+  
+  .height-auto {
+    height: auto;
+  }
+  

@@ -1,0 +1,17 @@
+.custom-textfield {
+    margin: 1em 0;
+  }
+  
+  .custom-textfield-label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .custom-textfield-input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
